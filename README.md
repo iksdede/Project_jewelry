@@ -8,3 +8,5 @@
 
 #Реализация проекта:
 28.10 - создана структура проекта, добавлены описания для разделов.
+
+Ссылка на макет: https://www.figma.com/design/OACuqXBMX9dKR71TT044pr/%D1%8E%D0%B2%D0%B5%D0%BB%D0%B8%D1%80%D0%BA%D0%B0?node-id=253-574&node-type=frame
