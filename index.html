@@ -4,39 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <title>LUNA JEWELRY</title>
 </head>
 <body>
    <header class="header container"> 
-     <a class="header_logo logo">LUNA JEWELRY</a>
      <nav class="header__nav">
           <ul class="header__list">
-               <li class="header__item"><a class="header__item-link" href='#'>Главная</a></li>
-               <li class="header__item"><a class="header__item-link" href='#'>Каталог</a></li>
-               <li class="header__item"><a class="header__item-link" href="AboutUs.html">О нас</a></li>
-               <li class="header__item"><a class="header__item-link" href='#'>Контакты</a></li>
+               <img class="header__logo-wrap" src="images/logo.png" href="index.html" alt="Логотип" width="100">
+               <li class="header__item"><a class="header__item-link" href='Catalog.html'>Каталог</a></li>
+               <li class="header__item"><a class="header__item-link" href='Action.html'>Акции</a></li>
+               <li class="header__item"><a class="header__item-link" href="№">Коллекции</a></li>
+               <li class="header__item"><a class="header__item-link" href='Delivery&Payment.html'>Доставка и оплата</a></li>
+               <li class="header__item"><a class="header__item-link" href='AboutUs.html'>О нас</a></li>
+               <img class="header__photo" src="images/profile.png" alt="Профиль" width="25,97" height="25,97">
+               <img class="header__photo" src="images/find.png" alt="Поиск" width="20" height="20">
+               <img class="header__photo" src="images/like.png" alt="Избранное" width="28" height="26">
+               <img class="header__photo" src="images/bag.png" alt="Корзина" width="26" height="26">
+               <span>7-999-123-45-67</span>
           </ul>
-          <span>7-999-123-45-67</span>
      </nav>
    </header>
    <main class="container">
      <!--Первый блок-->
       <section class="section promo">
-         <div class="promo__content">
-          <h2 class="promo__title section__title">Украшения, которые прослужат вам всю жизнь</h2>
-          <p class="promo__description">Наша цель — сохранить семейные традиции путем создания ювелирных украшений 
-               с использованием высококачественных материалов.</p>
-          <button class="promo__button" type="button">Смотреть каталог</button>
-          </div>
           <img class="promo__image" src="images/image30.jpg" alt="Женщина демонстрирует украшения на фоне платья" width="442" height="686">
-      </section> 
+          <div class="promo__wrap">
+          <h1 class="promo__title title1">Украшения, которые прослужат вам <i>всю жизнь</i></h1>
+          <p class="promo__description description">Наша цель — сохранить семейные традиции путем создания ювелирных украшений 
+               с использованием высококачественных материалов.</p>
+          <button class="promo__button button" type="button">Смотреть каталог</button>
+          </div>
+          <img class="promo__image1" src="images/image18.jpg" alt="Женщина демонстрирует украшения на фоне платья" width="617" height="881">
+     </section> 
       <!--Первый блок-->
       <!--Второй блок-->
       <section class="section loyal">
           <div class="loyal__content">
-               <h2 class="loyal__title">Система лояльности</h2>
-           <p class="loyal__description">Новая система лояльности для наших оптовых клиентов. Специально для вас мы разработали удобные и выгодные условия, при которых вы сможете не только заказывать украшения по лучшим ценам, но и повышать свою персональную скидку.</p>
+               <h2 class="loyal__title title">СИСТЕМА ЛОЯЛЬНОСТИ</h2>
+           <p class="loyal__description description">Новая система лояльности для наших оптовых клиентов. Специально для вас мы разработали удобные и выгодные условия, при которых вы сможете не только заказывать украшения по лучшим ценам, но и <b>повышать свою персональную скидку</b>.</p>
           <button class="loyal__button" type="button">Подробнее</button>
           </div>
           <img class="loyal__image" src="images/Rectangle17.jpg" alt="Женщина смотрит в кадр">
@@ -45,45 +52,46 @@
       <!--Третий блок-->
       <section class="section action">
           <div class="action__content">
-          <h2 class="action__title">Актуальные акции</h2>
-          <p class="action__description">Ознакомьтесь с актуальными акциями и специальными предложениями. Здесь каждый найдет для себя 
+          <h2 class="action__title title">АКТУАЛЬНЫЕ ЦЕНЫ</h2>
+          <p class="action__description description">Ознакомьтесь с актуальными акциями и специальными предложениями. Здесь каждый найдет для себя 
                что-то стоящее.</p>
           </div>
-          <div class="action__image">
           <img class="action__image" src="images/image31.jpg" alt="девушка на заднем плане">
-          <img class="action__image" src="images/actionbanner.png" alt="баннер с акцией">
+          <div class="action1__content">
+          <p class="action1__description">Подвеска с бриллиантом в подарок при покупке от 15 000 рублей</p>
+          <button class="action1__button button" type="button">Смотреть каталог</button>
           </div>     
       </section>
       <!--Третий блок-->
       <!--Четвертый блок-->
       <section class="section AboutUs">
           <div class="AboutUs__content">
-          <h2 class="AboutUs__title">О компании</h2>
-          <p class="AboutUs__description">Основная цель завода «Грант» – создание семейных традиций. Мы стремимся к тому, чтобы наши изделия передавались из поколения в поколение. Добиваемся мы этого путем создания актуальных моделей, с использованием высококачественных материалов, сохраняя при этом конкурентную стоимость продукции.</p>
-          <p class="AboutUs__description">Очень просто выпускать массовый товар, 
+          <h2 class="AboutUs__title title">О КОМПАНИИ</h2>
+          <p class="AboutUs__description description">Основная цель завода «Грант» – создание семейных традиций. Мы стремимся к тому, чтобы наши изделия передавались из поколения в поколение. Добиваемся мы этого путем создания актуальных моделей, с использованием высококачественных материалов, сохраняя при этом конкурентную стоимость продукции.</p>
+          <p class="AboutUs__description description">Очень просто выпускать массовый товар, 
                не задумываясь о его судьбе в перспективе, 
                но это не наша политика. Мы настолько уверены 
                в своих изделиях, что даем Вам гарантию на весь срок службы продукта, что подтверждено «Сертификатом качества изделия».</p>
-          <button class="section__button" type="button">Подробнее</button>
+          <button class="AboutUs__button" type="button">Подробнее</button>
           </div>
-          <img class="AboutUs__image" src="images/Rectangle16.jpg" alt="девушка с букетом">
+          <img class="AboutUs__image" src="images/Rectangle16.png" alt="девушка с букетом">
           </section>
       <!--Четвертый блок-->
       <!--Пятый блок-->  
           <section class="section categories">
+               <h2 class="categories__title title">ПОПУЛЯРНЫЕ КАТЕГОРИИ</h2>
                <div class="categories__content">
-                    <h2 class="categories__title">Популярные категории</h2>
-                    <img class="categories__image" src="images/Rectangle53.jpg" alt="Изысканная демонстрация. Блеск. Серьги">
-                    <p class="categories__description">Серьги нашего производства имеют множество преимуществ.</p>
-                    <p class="categories__description">Например, мы запаиваем и шлифуем шарниры на замках, что позволяет носить наши серьги многие годы без поломок.</p>
-                    <p class="categories__description">Выберите свою пару в каталоге.</p>
-               <button class="categories__button button" type="button">Выбрать серьги</button>     
+                    <img class="categories___image" src="images/Rectangle53.jpg" alt="Изысканная демонстрация. Блеск. Серьги">
+                    <p class="categories__description description">Серьги нашего производства имеют множество преимуществ.</p>
+                    <p class="categories__description description">Например, мы запаиваем и шлифуем шарниры на замках, что позволяет носить наши серьги многие годы без поломок.</p>
+                    <p class="categories__description description">Выберите свою пару в каталоге.</p>
+                    <button class="categories__button button" type="button">Выбрать серьги</button>     
                </div>
-               <div>
-                    <img class="categories____image" src="images/image29.jpg" alt="демнострация колец">
-                    <p class="categories__description">Помимо красоты, наши кольца невероятно удобны в носке.</p>
-                    <p class="categories__description">Мы заботимся о том, чтобы вам было максимально комфортно носить изделия нашего производства.</p>
-                    <p class="categories__description">Найдите свое идеальное кольцо в каталоге.</p>
+               <div class="categories1__content">
+                    <img class="categories1___image" src="images/image29.jpg" alt="демнострация колец">
+                    <p class="categories__description description">Помимо красоты, наши кольца невероятно удобны в носке.</p>
+                    <p class="categories__description description">Мы заботимся о том, чтобы вам было максимально комфортно носить изделия нашего производства.</p>
+                    <p class="categories__description description">Найдите свое идеальное кольцо в каталоге.</p>
                <button class="categories__button button" type ="button">Выбрать кольца</button> 
                </div>
           </section>
@@ -91,59 +99,62 @@
       <!--Шестой блок--> 
           <section class="section partner">
                <div class="partner__content">
-                    <h2 class="partner__title">Сотрудничество</h2>
-                    <p class="partner__description"> Мы предлагаем своим партнерам одни из самых выгодных условий на ювелирном рынке.</p>
-                    <p class="partner__description">1. Проверенный ассортимент, который будет продаваться.</p>
-                    <p class="partner__description">2. Персональный менеджер. 
+                    <h2 class="partner__title title">СОТРУДНИЧЕСТВО</h2>
+                    <p class="partner__description description"> Мы предлагаем своим партнерам одни из самых выгодных условий на ювелирном рынке.</p>
+                    <p class="partner__description description">1. Проверенный ассортимент, который будет продаваться.</p>
+                    <p class="partner__description description">2. Персональный менеджер. 
                          С Вами всегда на связи личный менеджер, который приедет в любой регион страны для демонстрации изделий.</p>
-                    <p class="partner__description">3. Удобная оплата, быстрая и бесплатная доставка.
+                    <p class="partner__description description">3. Удобная оплата, быстрая и бесплатная доставка.
                          Мы подбираем индивидуальные условия сотрудничества со всеми партнерами.</p>
-                    <p class="partner__description">4. Совместная рекламная кампания и продвижение 
+                    <p class="partner__description description">4. Совместная рекламная кампания и продвижение 
                          в соцсетях.
                          Вы можете использовать наш контент для развития своих профилей.</p> 
-                         <button class="partner__button" type ="button">Смотреть каталог</button>         
+                         <button class="partner__button button" type ="button">Смотреть каталог</button>         
                     </div>
                     <img class="partner__image" src="images/Rectangle16.jpg" alt="девушка">    
           </section>
       <!--Шестой блок-->
       <!--Седьмой блок--> 
           <section class="section new">
+               <h2 class="new__title title">НОВЫЕ КОЛЛЕКЦИИ</h2>
                <div class="new__content">
-                    <h2 class="new__title">Новые коллекции</h2>
                     <img class="new__image" src="images/Rectangle53(1).jpg" alt="демострация новой коллекции">
-                    <p class="new__description">Коллекция не продиктована модой. Украшения выполнены в дерзком дизайне,
+                    <p class="new__description description">Коллекция не продиктована модой. Украшения выполнены в дерзком дизайне,
                          напоминающем неоновые линии и огнни</p>
-                    <p class="new__description">Украшена бриллиантами диаметром 2,1 и 2,2 мм.</p>
-               <button class="new__button" type ="button">Подробнее</button>     
+                    <p class="new__description description">Украшена бриллиантами диаметром 2,1 и 2,2 мм.</p>
+               <button class="new__button button" type ="button">Подробнее</button>     
                </div>
-               <div class="new__content">
+               <div class="new__content1">
                     <img class="new__image" src="images/image29(1).jpg" alt="демонстрация новой коллекции">
-                    <p class="new__description">Коллекция с четкими геометрическими формами и концептуальной идеей. Дизайн
+                    <p class="new__description description">Коллекция с четкими геометрическими формами и концептуальной идеей. Дизайн
                          изделий напоминает контуры солнечного затмения.</p>
-                    <p class="new__description">В центре украшений располагается сверкающий бриллиант диаметром от 3 мм.</p>
-               <button class="new__button" type ="button">Подробнее</button> 
+                    <p class="new__description description">В центре украшений располагается сверкающий бриллиант диаметром от 3 мм.</p>
+               <button class="new__button button" type ="button">Подробнее</button> 
                </div>
           </section>
       <!--Седьмой блок-->    
       <!--Восьмой блок-->   
           <section class="section mail">
+               <h2 class="mail__title title">ПОДПИШИТЕСЬ НА НАШУ РАССЫЛКУ</h2>
+               <img class="mail__image" src="images/feedback.png">
                <div class="mail__content">
-                    <h2 class="mail__title">ПОДПИШИТЕСЬ НА НАШУ РАССЫЛКУ</h2>
-               <p class="mail__description">Узнавайте первыми о скидках, новинках 
+               <p class="mail__description description">Узнавайте первыми о скидках, новинках 
                     и актуальных акциях — подписывайтесь 
                     на нашу новостную рассылку.</p>
                     <form class="mail__form" action="/" method="post">
                          <input type="text" placeholder="Ваша имя">
                          <input type="email" placeholder="Ваше электронная почта">
-                         <input type="checkbox">
+                         <input type="checkbox" placeholder="Нажимая на кнопку «Подписаться», вы даете согласие на обработку персональных данных 
+                         и соглашаетесь c политикой конфиденциальности.">
                     </form>
-                    <button class="mail__button" type ="button">Подписаться</button>
+                    <button class="mail__button button" type ="button">Подписаться</button>
                     </div>
           </section>
       <!--Восьмой блок-->      
    </main>
    <footer class="footer">
      <a>LUNA JEWELRY</a>
+     <p>Бородина Е, Малинина И, Соколов М</p>
    </footer>
 </body>
 </html>

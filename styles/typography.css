@@ -1,0 +1,48 @@
+.button{
+    background-color: black;
+    color: white;
+    border: 0;
+    padding: 12px;
+    font-size: 23px;
+    width: 315px;
+    height: 87px;
+    font-family: CormorantBold;
+}
+
+.loyal__button{
+    background-color: white;
+    color: black;
+    border: 1;
+    border-color: black;
+    padding: 12px;
+    font-size: 23px;
+    width: 315px;
+    height: 87px;
+    font-family: CormorantBold;
+}
+
+.AboutUs__button{
+    background-color: white;
+    color: black;
+    border: 1;
+    border-color: black;
+    padding: 12px;
+    font-size: 23px;
+    width: 315px;
+    height: 87px;
+    font-family: CormorantBold;
+}
+
+.title{
+    font-size: 45px;
+}
+
+.description{
+    font-size: 18px;
+}
+
+.title1{
+    font-size: 64px;
+    line-height: 72px;
+    width: 1000px;
+}

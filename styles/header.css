@@ -1,0 +1,28 @@
+.header__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    padding-left: 341px;
+    gap: 40px;
+}
+
+.header__item-link{
+    display: block;
+    padding: 10px;
+    margin: 5px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+}
+
+.header__logo-wrap{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
