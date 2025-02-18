@@ -50,6 +50,9 @@
 .loyal{
   background-color: #F2F0EE;
 }
+.action{
+  padding: 50px 350px;
+}
 .action__content{
   margin: 0;
   padding: 0;
@@ -57,27 +60,33 @@
   position: relative;
   flex-wrap: wrap;
   list-style-type: none; 
-  left: 360px;
-  width: 566px;
+}
+.action__background{
+  background-image: url(../images/image31.jpg);
+  background-size: contain;
+  background-position: right top;
+  height: 642px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.action1__description{
+  margin: 0;
 }
 .action__image{
-  position: relative;
-  left: 357px;
-  top: 20px;
+  background-image: url(../images/image31.jpg);
+  background-size: contain;
+  background-position: right top;
 }
 .action1__content{
   margin: 0;
   padding: 0;
-  display: flex;
-  position: relative;
-  flex-wrap: wrap;
-  list-style-type: none; 
-  left: 700px;
-  width: 566px;
   align-items: center;
-  top: -475px;
+  justify-content: center;
   background-color: white;
   height: 340px;
+  width: 635px;
+  padding: 95px;
 }
 .AboutUs__content{
   margin: 0;
@@ -87,13 +96,13 @@
   flex-wrap: wrap;
   list-style-type: none; 
   left: 1000px;
-  top: -50px;
+  top: 0px;
   width: 566px;
 }
 .AboutUs__image{
   position: relative;
   left: 360px;
-  top: -700px;
+  top: -630px;
   align-items: center;
 }
 .categories__title{
@@ -185,9 +194,35 @@
   position: relative;
   top: -2500px;
   left: 579px;
+  margin-bottom: -2400px;
 }
-.mail__image{
-  top: -1250px;
-  left: 970px;
+
+
+.mail__content{
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  height: 340px;
+  width: 635px;
+  padding: 95px;
+  margin-bottom: -1350px;
 }
+
+.button{
+  transition: background-color 0.5s color 0.5s;
+}
+.button:hover{
+  background-color: white;
+  color: black;
+  border-color: black;
+  border-radius: 3px;
+}
+.button:active{
+  background-color: black;
+  color: white;
+}
+
+
 /*index.html*/
