@@ -70,7 +70,7 @@
   align-items: center;
   justify-content: center;
 }
-.action1__description{
+.action__description1{
   margin: 0;
 }
 .action__image{
@@ -78,7 +78,7 @@
   background-size: contain;
   background-position: right top;
 }
-.action1__content{
+.action__content1{
   margin: 0;
   padding: 0;
   align-items: center;
@@ -126,7 +126,7 @@
   top: -500px;
   width: 429px;
 }
-.categories1__content{
+.categories__content1{
   margin: 0;
   padding: 0;
   display: flex;
