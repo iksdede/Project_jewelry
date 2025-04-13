@@ -87,3 +87,42 @@ function scrollToTop() {
       scrollButton.style.display = 'none';
     }
   });
+
+  const headerMenu = document.querySelector('.header__nav');
+if (headerMenu){
+    const headerList = headerMenu.querySelector('.header__list');
+    const menuData = {
+    link1: {
+        link: 'Catalog.html',
+        title: 'Каталог',
+    },
+    link2: {
+        link: 'Action.html',
+        title: 'Акции',
+    },
+    link3: {
+        link: '#',
+        title: 'Коллекции',
+    },
+    link4: {
+        link: 'Delivery&Payment.html',
+        title: 'Доставка и оплата',
+    },
+    link5: {
+        link: 'AboutUs.html',
+        title: 'О нас',
+    }
+}
+
+const createLink = ( UrLink, title) =>{
+    const link = `
+    <li class="header__item"<a href="${UrLink}" class="header__item-link">${title}</a></li>
+    `;
+    return link;
+}
+for (const linkItem in menuData) {
+    const link = menuData[linkItem];
+    const linkIndex = createLink(link.UrLink, link.title);
+    headerList.insertAdjacentHTML('beforeend', linkIndex);
+    }
+}
