@@ -51,3 +51,48 @@
     padding-top: 90px; /* Примерная высота вашего header */
   }
   
+/* Стили для поисковой строки */
+.search-box {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 300px;
+    background: white;
+    padding: 15px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    display: none;
+    z-index: 1001;
+  }
+  
+  .search-input {
+    width: 70%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+  }
+  
+  .search-button {
+    width: 30%;
+    padding: 8px 12px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+  }
+  
+  .search-icon {
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .search-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Показываем поисковую строку при активном состоянии */
+  .header__search-container.active .search-box {
+    display: flex;
+  }
