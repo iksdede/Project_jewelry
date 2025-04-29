@@ -224,5 +224,134 @@
   color: white;
 }
 
+.jewelry-carousel {
+  font-family: 'Playfair Display', serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  position: relative;
+}
 
-/*index.html*/
+.carousel-title {
+  text-align: center;
+  font-size: 32px;
+  color: #8B4513;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.carousel-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 25px;
+  padding-bottom: 20px;
+  scrollbar-width: none; /* Firefox */
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.jewelry-card {
+  scroll-snap-align: start;
+  min-width: 280px;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(139, 69, 19, 0.1);
+  transition: transform 0.3s;
+  position: relative;
+}
+
+.jewelry-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-image {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.card-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: white;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 18px;
+  color: black;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.card-description {
+  font-size: 14px;
+  color: black;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.card-price {
+  font-size: 20px;
+  color: black;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.card-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: #ffffff;
+  color: black;
+  border: 2px;
+  border-color: black;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.card-button:hover {
+  background: #ffffff;
+}
+
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.nav-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: grey;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.nav-dot.active {
+  background: black;
+}
+
+@media (max-width: 768px) {
+  .jewelry-card {
+      min-width: 240px;
+  }
+}
