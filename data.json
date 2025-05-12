@@ -1,31 +1,35 @@
 [
     {
          "link": "#",
-         "icon": "../images/profile.png",
+         "icon": "images/profile.png",
          "iconAlt": "Профиль",
          "iconWidth": 22,
-         "iconHeight": 24
+         "iconHeight": 24,
+         "cssclass": "profile-icon"
      },
      {
          "link": "#",
-         "icon": "../images/find.png",
+         "icon": "images/find.png",
          "iconAlt": "Поиск",
          "iconWidth": 24,
-         "iconHeight": 24
+         "iconHeight": 24,
+         "cssclass": "search-icon"
      },
      {
          "link": "#",
-         "icon": "../images/likee.png",
+         "icon": "images/like.png",
          "iconAlt": "Избранное",
          "iconWidth": 24,
-         "iconHeight": 23
+         "iconHeight": 23,
+         "cssclass": ""
      },
      {
          "link": "#",
-         "icon": "../images/bag.png",
+         "icon": "images/bag.png",
          "iconAlt": "Корзина",
          "iconWidth": 24,
-         "iconHeight": 23
+         "iconHeight": 23,
+         "cssclass": ""
      }
  ]
  

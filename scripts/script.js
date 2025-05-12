@@ -66,33 +66,6 @@ document.querySelectorAll('.header__item-link').forEach(link => {
   
 document.addEventListener('DOMContentLoaded', function() {
 
-    const profileIcon = document.querySelector('.profile-icon');
-    const modal = document.getElementById('profileModal');
-    const closeBtn = document.querySelector('.close-modal');
-    
-
-    profileIcon.addEventListener('click', function() {
-      modal.style.display = 'block';
-    });
-    
-
-    closeBtn.addEventListener('click', function() {
-      modal.style.display = 'none';
-    });
-    
-
-    window.addEventListener('click', function(event) {
-      if (event.target === modal) {
-        modal.style.display = 'none';
-      }
-    });
-    
- 
-    document.addEventListener('keydown', function(event) {
-      if (event.key === 'Escape' && modal.style.display === 'block') {
-        modal.style.display = 'none';
-      }
-    });
   
 
 function scrollToTop() {
@@ -161,80 +134,111 @@ function scrollToTop() {
       }, 3000); 
   }
 
-  // Простая логика для навигационных точек
-  const carousel = document.getElementById('carousel');
-  const dots = document.querySelectorAll('.nav-dot');
-  
-  dots.forEach((dot, index) => {
-      dot.addEventListener('click', () => {
-          // Удаляем активный класс у всех точек
-          dots.forEach(d => d.classList.remove('active'));
-          // Добавляем активный класс текущей точке
-          dot.classList.add('active');
-          
-          // Прокручиваем карусель к соответствующей карточке
+       // Прокручиваем карусель к соответствующей карточке
           carousel.scrollTo({
-              left: index * (280 + 25), // ширина карточки + отступ
+              left: 280 + 25, // ширина карточки + отступ
               behavior: 'smooth'
           });
       });
-  });
+
   
   // Обновление активной точки при прокрутке
-  carousel.addEventListener('scroll', () => {
-      const cardWidth = 280 + 25;
-      const scrollPos = carousel.scrollLeft + cardWidth/2;
-      const activeIndex = Math.floor(scrollPos / cardWidth);
-      
-      dots.forEach((dot, index) => {
-          dot.classList.toggle('active', index === activeIndex);
-      });
-  });
+  
 
-});
-
-const cardsImages = document.querySelector(".image");
+const cardsImages = document.querySelector(".header__nav");
 if (cardsImages) {
-    const cardListImages = cardsImages.querySelector(".image");
+    const cardListImages = cardsImages.querySelector(".header__list");
 
     // Пример URL для получения данных с сервера
-    const apiUrl = "images.json";
+    const apiUrl = "data.json";
 
     // Функция для создания карточки
-    const createCard = (imageUrl, imageAlt, imageWidth) => {
+    const createCard = (link,icon,iconAlt,iconWidth,iconHeight,cssclass) => {
         // Шаблонные строки и подстановки
         const image = `
         <li class=".image">
-            <img class="images__picture" src="${imageUrl[0]}" alt="${imageAlt}" width="${imageWidth}">
-            <img class="images__picture" src="${imageUrl[1]}" alt="${imageAlt}" width="${imageWidth}" style="display: none;">
+            <img class="${cssclass}" src="${icon}" alt="${iconAlt}" width="${iconWidth}">
         </li>
     `;
 
         return image;
     };
-
-}
-
-
-fetch(apiUrl)
-.then(response => response.json())
-.then(data => {
-    console.log(data); // Данные
-    console.log(typeof (data)); // Тип полученных данных
-
-    // for (const item in data) {
-    //     const card = data[item];
-
-    //     const cardElement = createCard(card.link, card.icon, card.iconAlt, card.iconWidth, card.iconHeight, card.title, card.description);
-    //     cardList.insertAdjacentHTML('beforeend', cardElement);
-    // }
-
-    data.forEach(item => {
-        const cardElement = createCard(item.link, item.icon, item.iconAlt, item.iconWidth, item.iconHeight, item.title, item.description);
-        cardList.insertAdjacentHTML('beforeend', cardElement);
+    fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data); // Данные
+        console.log(typeof (data)); // Тип полученных данных
+    
+        // for (const item in data) {
+        //     const card = data[item];
+    
+        //     const cardElement = createCard(card.link, card.icon, card.iconAlt, card.iconWidth, card.iconHeight, card.title, card.description);
+        //     cardList.insertAdjacentHTML('beforeend', cardElement);
+        // }
+    
+        data.forEach(item => {
+            const cardElement = createCard(item.link, item.icon, item.iconAlt, item.iconWidth, item.iconHeight, item.cssclass);
+            cardListImages.insertAdjacentHTML('beforeend', cardElement);
+        });
+        const profileIcon = document.querySelector('.profile-icon');
+        const modal = document.getElementById('profileModal');
+        const closeBtn = document.querySelector('.close-modal');
+        
+    
+        profileIcon.addEventListener('click', function() {
+          modal.style.display = 'block';
+        });
+        
+    
+        closeBtn.addEventListener('click', function() {
+          modal.style.display = 'none';
+        });
+        
+    
+        window.addEventListener('click', function(event) {
+          if (event.target === modal) {
+            modal.style.display = 'none';
+          }
+        });
+        
+     
+        document.addEventListener('keydown', function(event) {
+          if (event.key === 'Escape' && modal.style.display === 'block') {
+            modal.style.display = 'none';
+          }
+        });
+      
+    })
+    .catch(error => {
+        console.error('Ошибка при загрузке данных:', error);
     });
-})
-.catch(error => {
-    console.error('Ошибка при загрузке данных:', error);
+}
+document.addEventListener('DOMContentLoaded', function() {
+  new Swiper('.card--slider', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+      },
+      navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+          576: {
+              slidesPerView: 2,
+          },
+          768: {
+              slidesPerView: 3,
+          },
+          992: {
+              slidesPerView: 4,
+          }
+      }
+  });
 });
+
+
+
 
