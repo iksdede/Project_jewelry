@@ -128,7 +128,7 @@ function scrollToTop() {
     
           preloader.style.opacity = '0';
           preloader.style.visibility = 'hidden';
-          content.style.display = 'block';
+          content.style.opacity = '1';
 
           preloader.remove();
       }, 3000); 
