@@ -80,41 +80,58 @@
      </div> 
       </section>
       <!--Третий блок-->
-      <section class="section card card--slider swiper">
-        <div class="card__list card__list--slider swiper-wrapper">
-            <a class="card__item swiper-slide" href="#">
-                <span class="card__icon">
-                    <img src="images/icon/menu.svg" alt="Иконка" width="22" height="24">
-                </span>
-                <h3 class="card__title">Заголовок 1</h3>
-                <p class="card__description">Описание 1</p>
-            </a>
-            <a class="card__item swiper-slide" href="#">
-                <span class="card__icon">
-                    <img src="images/icon/cook.svg" alt="Иконка" width="24" height="24">
-                </span>
-                <h3 class="card__title">Заголовок 2</h3>
-                <p class="card__description">Описание 2</p>
-            </a>
-            <a class="card__item swiper-slide" href="#">
-                <span class="card__icon">
-                    <img src="images/icon/chef.svg" alt="Иконка" width="24" height="23">
-                </span>
-                <h3 class="card__title">Заголовок 3</h3>
-                <p class="card__description">Описание 3</p>
-            </a>
-            <a class="card__item swiper-slide" href="#">
-                <span class="card__icon">
-                    <img src="images/icon/fire.svg" alt="Иконка" width="24" height="23">
-                </span>
-                <h3 class="card__title">Заголовок 4</h3>
-                <p class="card__description">Описание 4</p>
-            </a>
-        </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-    </section>
+   <div class="swiper mySwiper">
+     <div class="swiper-wrapper">
+          <div class="swiper-slide">
+               <div class="swiper-slide-info">
+               <h3 class="swiper-text">«Лунный Свет»</h3>
+               <p class="swiper-description">Кольцо с жемчужным перламутром и бриллиантовой россыпью, напоминающее мерцание луны на воде. Идеально для романтичных образов.</p>
+               </div>
+               <div class="swiper-slide-photo">
+                    <img src="images/slider/slide1.jpg" alt="кольцо" class="swiper-slide-image" width="600">
+               </div>
+          </div>
+          <div class="swiper-slide">
+               <div class="swiper-slide-info">
+               <h3 class="swiper-text">«Стальной Рассвет»</h3>
+               <p class="swiper-description">Минималистичное кольцо из черненого серебра с геометрическими гранями — символ силы и современной элегантности.</p>
+               </div>
+               <div class="swiper-slide-photo">
+                    <img src="images/slider/slide2.png" alt="кольцо" class="swiper-slide-image" width="600">
+               </div>
+          </div>
+          <div class="swiper-slide">
+               <div class="swiper-slide-info">
+               <h3 class="swiper-text">«Огненный Вихрь»</h3>
+               <p class="swiper-description">Кольцо с рубином в огранке «кабошон» и золотыми завитками, словно языки пламени. Для смелых и страстных натур.</p>
+               </div>
+               <div class="swiper-slide-photo">
+                    <img src="images/slider/slide3.jpg" alt="кольцо" class="swiper-slide-image" width="600">
+               </div>
+          </div>
+          <div class="swiper-slide">
+              <div class="swiper-slide-info">
+               <h3 class="swiper-text">«Космическая Пыль»</h3>
+               <p class="swiper-description">Кольцо с черным опалом и мелкими сапфирами, имитирующими далекие звезды. Для любителей загадочного и необычного.</p>
+               </div>
+               <div class="swiper-slide-photo">
+                    <img src="images/slider/slide4.jpg" alt="кольцо" class="swiper-slide-image" width="600">
+               </div>
+          </div>
+          <div class="swiper-slide">
+             <div class="swiper-slide-info">
+               <h3 class="swiper-text">«Тайный Сад»</h3>
+               <p class="swiper-description">Кольцо с цветочным орнаментом и изумрудными вставками, будто перенесенное из сказочного леса.</p>
+               </div>
+               <div class="swiper-slide-photo">
+                    <img src="images/slider/slide5.jpg" alt="кольцо" class="swiper-slide-image" width="600">
+               </div>
+          </div>
+     </div>
+     <div class="swiper-button-next"></div>
+     <div class="swiper-button-prev"></div>
+     <div class="swiper-pagination"></div>
+   </div>
 
       <!--Четвертый блок-->
       <section class="section AboutUs">
@@ -215,10 +232,11 @@
        <span class="close-modal">&times;</span>
        <h2>Войти в личный кабинет</h2>
        <form>
-         <input type="text" placeholder="Логин или email">
-         <input type="password" placeholder="Пароль">
-         <button type="submit">Войти</button>
+         <input class="modal__input" type="text" placeholder="Логин или email">
+         <input class="modal__input" type="password" placeholder="Пароль">
+         <button class="modal__button" type="submit">Войти</button>
        </form>
+       <p id="modal-message" class="modal__message"></p>
        <div class="modal-links">
          <a href="#">Регистрация</a>
          <a href="#">Забыли пароль?</a>

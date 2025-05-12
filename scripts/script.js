@@ -133,13 +133,7 @@ function scrollToTop() {
           preloader.remove();
       }, 3000); 
   }
-
-       // Прокручиваем карусель к соответствующей карточке
-          carousel.scrollTo({
-              left: 280 + 25, // ширина карточки + отступ
-              behavior: 'smooth'
-          });
-      });
+});
 
   
   // Обновление активной точки при прокрутке
@@ -213,32 +207,15 @@ if (cardsImages) {
         console.error('Ошибка при загрузке данных:', error);
     });
 }
-document.addEventListener('DOMContentLoaded', function() {
-  new Swiper('.card--slider', {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-      },
-      navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-      },
-      breakpoints: {
-          576: {
-              slidesPerView: 2,
-          },
-          768: {
-              slidesPerView: 3,
-          },
-          992: {
-              slidesPerView: 4,
-          }
-      }
-  });
+
+var swiper = new Swiper(".mySwiper", {
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
-
-
-
 
