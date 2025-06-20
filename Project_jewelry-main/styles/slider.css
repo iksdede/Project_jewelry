@@ -1,0 +1,25 @@
+.mySwiper {
+    width: 1200px;
+    height: 600px;
+    padding-top: -100px;
+}
+
+.swiper-slide-image {
+    width: 600;
+    height: 480px;
+   padding: auto;
+}
+
+.swiper-slide-info{
+    width: 500px;
+   margin-left: 600px;
+   height: 0px;
+}
+
+.swiper-button-next {
+    color: black;
+}
+
+.swiper-button-prev {
+    color: black;
+}

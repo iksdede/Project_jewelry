@@ -1,0 +1,20 @@
+.promo__button {
+    background-color: black;
+    color: white;
+    border: 0;
+    padding: 12px;
+    font-size: 23px;
+    width: 315px;
+    height: 87px;
+    font-family: CormorantBold;
+}
+
+.loyal__button {
+    background-color: white;
+    color: black;
+    border: 5;
+    border-color: black;
+    padding: 12px;
+    font-size: 16px;
+    font-family: CormorantBold;
+}

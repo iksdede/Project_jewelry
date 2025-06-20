@@ -1,0 +1,91 @@
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.preloader.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loader {
+    width: 80px;
+    height: 80px;
+    position: relative;
+}
+
+.loader-inner {
+    position: absolute;
+    border: 4px solid #3498db;
+    border-radius: 50%;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    animation: rotate 2s linear infinite;
+}
+
+.loader-inner:nth-child(1) {
+    width: 70px;
+    height: 70px;
+    left: 5px;
+    top: 5px;
+    animation-delay: 0.1s;
+}
+
+.loader-inner:nth-child(2) {
+    width: 50px;
+    height: 50px;
+    left: 15px;
+    top: 15px;
+    animation-delay: 0.2s;
+}
+
+.loader-inner:nth-child(3) {
+    width: 30px;
+    height: 30px;
+    left: 25px;
+    top: 25px;
+    animation-delay: 0.3s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Стили для основного контента */
+.content {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.content.visible {
+    opacity: 1;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+p {
+    line-height: 1.6;
+    color: #34495e;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}

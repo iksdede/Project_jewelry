@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас - Ювелирный салон</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 24px;
+            height: 100%;
+            width: 2px;
+            background: #d1a054;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Шапка -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-gem text-2xl text-yellow-600 mr-2"></i>
+                <span class="text-xl font-bold text-gray-800">LUXURY JEWELS</span>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-yellow-600 transition">Главная</a>
+                <a href="about.html" class="text-yellow-600 font-medium">О нас</a>
+                <a href="catalog.html" class="text-gray-600 hover:text-yellow-600 transition">Каталог</a>
+                <a href="services.html" class="text-gray-600 hover:text-yellow-600 transition">Услуги</a>
+                <a href="contacts.html" class="text-gray-600 hover:text-yellow-600 transition">Контакты</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-gray-600 hover:text-yellow-600 transition">
+                    <i class="fas fa-search"></i>
+                </a>
+                <a href="#" class="text-gray-600 hover:text-yellow-600 transition">
+                    <i class="fas fa-user"></i>
+                </a>
+                <a href="#" class="text-gray-600 hover:text-yellow-600 transition relative">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="absolute -top-2 -right-2 bg-yellow-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
+                </a>
+                <button class="md:hidden text-gray-600" id="menu-toggle">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Мобильное меню -->
+        <div class="md:hidden hidden bg-white py-2 px-4 shadow-md" id="mobile-menu">
+            <a href="index.html" class="block py-2 text-gray-600 hover:text-yellow-600 transition">Главная</a>
+            <a href="about.html" class="block py-2 text-yellow-600 font-medium">О нас</a>
+            <a href="catalog.html" class="block py-2 text-gray-600 hover:text-yellow-600 transition">Каталог</a>
+            <a href="services.html" class="block py-2 text-gray-600 hover:text-yellow-600 transition">Услуги</a>
+            <a href="contacts.html" class="block py-2 text-gray-600 hover:text-yellow-600 transition">Контакты</a>
+        </div>
+    </header>
+
+    <!-- Герой-секция -->
+    <section class="hero-bg text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">О нас</h1>
+            <p class="text-xl md:text-2xl max-w-2xl mx-auto">История нашего ювелирного дома и философия создания украшений</p>
+        </div>
+    </section>
+
+    <!-- О компании -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Ювелирная мастерская" 
+                         class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Наша история</h2>
+                    <p class="text-gray-600 mb-4">
+                        Основанный в 1995 году, наш ювелирный дом начал свою историю с небольшой мастерской, где создавались уникальные украшения по индивидуальным эскизам. 
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        Сегодня мы - это современное производство, сочетающее в себе многовековые традиции ювелирного искусства и инновационные технологии. Каждое наше украшение - это произведение искусства, созданное с любовью и вниманием к деталям.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="bg-yellow-50 px-6 py-4 rounded-lg">
+                            <h3 class="text-yellow-600 font-bold text-xl">25+</h3>
+                            <p class="text-gray-600">Лет на рынке</p>
+                        </div>
+                        <div class="bg-yellow-50 px-6 py-4 rounded-lg">
+                            <h3 class="text-yellow-600 font-bold text-xl">5000+</h3>
+                            <p class="text-gray-600">Довольных клиентов</p>
+                        </div>
+                        <div class="bg-yellow-50 px-6 py-4 rounded-lg">
+                            <h3 class="text-yellow-600 font-bold text-xl">50+</h3>
+                            <p class="text-gray-600">Мастеров в команде</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Наши ценности -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Наши ценности</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition">
+                    <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-medal text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Качество</h3>
+                    <p class="text-gray-600">
+                        Мы используем только сертифицированные драгоценные металлы и камни высшего качества. Каждое изделие проходит многоступенчатый контроль.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition">
+                    <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-hand-holding-heart text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Традиции</h3>
+                    <p class="text-gray-600">
+                        Сохраняем и развиваем традиции ювелирного искусства, передавая мастерство из поколения в поколение.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition">
+                    <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-lightbulb text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Инновации</h3>
+                    <p class="text-gray-600">
+                        Постоянно внедряем новые технологии и дизайнерские решения, оставаясь на передовой ювелирной индустрии.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Наша команда -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Наша команда</h2>
+            
+            <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="team-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" 
+                         alt="Ювелир Анна" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-gray-800">Анна Смирнова</h3>
+                        <p class="text-yellow-600 mb-2">Главный дизайнер</p>
+                        <p class="text-gray-600 text-sm">15 лет создает уникальные украшения, вдохновляясь природой и архитектурой.</p>
+                    </div>
+                </div>
+                
+                <div class="team-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Ювелир Михаил" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-gray-800">Михаил Петров</h3>
+                        <p class="text-yellow-600 mb-2">Главный ювелир</p>
+                        <p class="text-gray-600 text-sm">Потомственный ювелир с 20-летним стажем, специалист по сложным техникам.</p>
+                    </div>
+                </div>
+                
+                <div class="team-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                         alt="Геммолог Елена" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-gray-800">Елена Ковалева</h3>
+                        <p class="text-yellow-600 mb-2">Главный геммолог</p>
+                        <p class="text-gray-600 text-sm">Эксперт по драгоценным камням с международной сертификацией GIA.</p>
+                    </div>
+                </div>
+                
+                <div class="team-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Директор Алексей" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-gray-800">Алексей Иванов</h3>
+                        <p class="text-yellow-600 mb-2">Директор салона</p>
+                        <p class="text-gray-600 text-sm">Управляет бизнесом более 10 лет, создавая лучший сервис для клиентов.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- История компании -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Наша история</h2>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="relative">
+                    <!-- 1995 -->
+                    <div class="timeline-item relative pl-10 pb-10">
+                        <div class="absolute left-0 top-0 w-4 h-4 rounded-full bg-yellow-600 border-4 border-yellow-100"></div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">1995</h3>
+                        <p class="text-gray-600">
+                            Основание компании как небольшой ювелирной мастерской в центре Москвы. Первые работы создавались по индивидуальным заказам.
+                        </p>
+                    </div>
+                    
+                    <!-- 2002 -->
+                    <div class="timeline-item relative pl-10 pb-10">
+                        <div class="absolute left-0 top-0 w-4 h-4 rounded-full bg-yellow-600 border-4 border-yellow-100"></div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">2002</h3>
+                        <p class="text-gray-600">
+                            Открытие первого розничного салона и запуск собственной коллекции украшений. Начало сотрудничества с российскими дизайнерами.
+                        </p>
+                    </div>
+                    
+                    <!-- 2010 -->
+                    <div class="timeline-item relative pl-10 pb-10">
+                        <div class="absolute left-0 top-0 w-4 h-4 rounded-full bg-yellow-600 border-4 border-yellow-100"></div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">2010</h3>
+                        <p class="text-gray-600">
+                            Расширение производства и внедрение современных технологий 3D-моделирования и лазерной гравировки.
+                        </p>
+                    </div>
+                    
+                    <!-- 2018 -->
+                    <div class="timeline-item relative pl-10 pb-10">
+                        <div class="absolute left-0 top-0 w-4 h-4 rounded-full bg-yellow-600 border-4 border-yellow-100"></div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">2018</h3>
+                        <p class="text-gray-600">
+                            Запуск интернет-магазина и программы лояльности для постоянных клиентов. Начало международных поставок.
+                        </p>
+                    </div>
+                    
+                    <!-- 2023 -->
+                    <div class="timeline-item relative pl-10">
+                        <div class="absolute left-0 top-0 w-4 h-4 rounded-full bg-yellow-600 border-4 border-yellow-100"></div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">2023</h3>
+                        <p class="text-gray-600">
+                            Современный ювелирный дом с 5 салонами в Москве и Санкт-Петербурге, собственной производственной базой и командой из 50 мастеров.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Отзывы наших клиентов</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-gray-600 text-sm">2 недели назад</span>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        "Заказывала обручальные кольца в этом салоне. Осталась в восторге от качества работы и сервиса! Мастер учел все наши пожелания и создал настоящие произведения искусства."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Анна" 
+                             class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Анна К.</h4>
+                            <p class="text-gray-500 text-sm">Москва</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-gray-600 text-sm">1 месяц назад</span>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        "Подарил жене серьги на годовщину свадьбы. Камни подобраны идеально, огранка безупречная. Спасибо геммологу за профессиональную консультацию - жена в полном восторге!"
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                             alt="Дмитрий" 
+                             class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Дмитрий С.</h4>
+                            <p class="text-gray-500 text-sm">Санкт-Петербург</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-gray-600 text-sm">3 месяца назад</span>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        "Передавала бабушкину брошь на реставрацию. Мастера сделали невозможное - вернули украшению первоначальный вид! Теперь это семейная реликвия, которую смогут носить мои дочери."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" 
+                             alt="Ольга" 
+                             class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Ольга М.</h4>
+                            <p class="text-gray-500 text-sm">Казань</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Призыв к действию -->
+    <section class="py-16 bg-yellow-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Готовы создать свое уникальное украшение?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Посетите наш салон или запишитесь на консультацию к нашему дизайнеру
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="contacts.html" class="bg-white text-yellow-600 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition">
+                    Записаться на консультацию
+                </a>
+                <a href="tel:+74951234567" class="border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-yellow-600 transition">
+                    <i class="fas fa-phone mr-2"></i> +7 (495) 123-45-67
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-gem text-2xl text-yellow-600 mr-2"></i>
+                        <span class="text-xl font-bold">LUXURY JEWELS</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Ювелирный дом с 25-летней историей. Создаем украшения, которые становятся семейными реликвиями.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-yellow-600 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-600 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-600 transition">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-600 transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Меню</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-yellow-600 transition">Главная</a></li>
+                        <li><a href="about.html" class="text-yellow-600">О нас</a></li>
+                        <li><a href="catalog.html" class="text-gray-400 hover:text-yellow-600 transition">Каталог</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-yellow-600 transition">Услуги</a></li>
+                        <li><a href="contacts.html" class="text-gray-400 hover:text-yellow-600 transition">Контакты</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Контакты</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-yellow-600 mt-1 mr-2"></i>
+                            <span class="text-gray-400">Москва, ул. Тверская, 18</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-yellow-600 mr-2"></i>
+                            <span class="text-gray-400">+7 (495) 123-45-67</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-yellow-600 mr-2"></i>
+                            <span class="text-gray-400">info@luxury-jewels.ru</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock text-yellow-600 mr-2"></i>
+                            <span class="text-gray-400">Пн-Сб: 10:00 - 20:00</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Подписаться на новости</h3>
+                    <p class="text-gray-400 mb-4">
+                        Узнавайте первыми о новых коллекциях и специальных предложениях
+                    </p>
+                    <form class="flex">
+                        <input type="email" placeholder="Ваш email" class="bg-gray-800 text-white px-4 py-2 rounded-l focus:outline-none focus:ring-2 focus:ring-yellow-600 w-full">
+                        <button type="submit" class="bg-yellow-600 text-white px-4 rounded-r hover:bg-yellow-700 transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                    © 2023 Luxury Jewels. Все права защищены.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-yellow-600 text-sm transition">Политика конфиденциальности</a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-600 text-sm transition">Условия использования</a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-600 text-sm transition">Карта сайта</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Мобильное меню
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Плавная прокрутка для всех ссылок
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
